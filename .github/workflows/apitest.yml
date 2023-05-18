@@ -13,4 +13,4 @@ jobs:
 
     steps:
     - name: Send greeting
-      run: echo " Welcome ${{ github.event.inputs.name }}"
+      run: echo " ${{ github.event.inputs.name }}"
