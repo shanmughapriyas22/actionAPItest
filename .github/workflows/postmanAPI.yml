@@ -13,6 +13,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Passed parameter
-        run: 'echo "field: ${{ github.event.client_payload.text }}"'
+        run: |
+          echo 'echo "field: ${{ github.event.client_payload.vnet_name }}"'
+          echo 'echo "field: ${{ github.event.client_payload.snet1.snet_name1 }}"'
       - name: Passed parameter (JSON)        
         run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
