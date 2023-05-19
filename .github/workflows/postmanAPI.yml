@@ -12,3 +12,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Pssed parameter
+        run: 'echo "field: ${{ github.event.client_payload.text }}"'
