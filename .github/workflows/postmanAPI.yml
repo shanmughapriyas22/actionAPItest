@@ -12,5 +12,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Pssed parameter
+      - name: Passed parameter
         run: 'echo "field: ${{ github.event.client_payload.text }}"'
+      - name: Passed parameter (JSON)        
+        run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
